@@ -19,12 +19,12 @@
   <span class="post__metaWords">
     {{- .Scratch.Set "ICON_NAME" "file-alt" -}}
     {{- partial "icon" . -}}
-    {{- printf "%d 字" .WordCount -}}
+    {{- printf "%d words" .WordCount -}}
   </span>
   {{ printf "" }}
   <span class="post__metaMinutes">
     {{- .Scratch.Set "ICON_NAME" "file-alt" -}}
     {{- partial "icon" . -}}
-    {{- printf "%d 分钟" .ReadingTime -}}
+    {{- printf "%d minutes" .ReadingTime -}}
   </span>
 </div>
