@@ -11,8 +11,8 @@
     display: flex;
 
     & > .content {
-      flex: 1 1 75%;
-      max-width: 75%;
+      flex: 1 1 auto;
+      max-width: calc(100% - 16rem);
 
       & > .content__inner {
         height: 100%;
@@ -24,8 +24,8 @@
     }
 
     & > .sidebar {
-      flex: 0 1 25%;
-      max-width: 25%;
+      flex: 0 1 20rem;
+      //max-width: 25%;
 
       & > .sidebar__inner {
         height: 100%;
@@ -37,7 +37,7 @@
     }
   }
 
-  @include responsive(md) {
+  @include responsive(lg) {
     & > .container {
       display: flex;
       flex-direction: column;

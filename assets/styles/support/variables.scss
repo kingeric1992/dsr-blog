@@ -1,6 +1,7 @@
 @import '@dsrca/design/variables';
 
-$responsive-desktop: 975px;
+//$responsive-desktop: 975px;
+$responsive-desktop: 1920px;
 $responsive-tablet: 750px;
 
 @mixin responsive($size) {

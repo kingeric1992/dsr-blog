@@ -4,6 +4,19 @@
 @import '@dsrca/design/colors';
 @import '@dsrca/design/markdown';
 @import '@dsrca/design/prism';
+
+// override variables before mixin
+
+$line-height-lg: 2;
+$line-height-md: 1.75;
+$line-height-sm: 1.5;
+
+$font-xl: 1.7rem;
+$font-lg: 1.5rem;
+$font-md: 1.1rem;
+$font-sm: 0.75rem;
+$font-xs: 0.5rem;
+
 @include dsr-colors-full;
 @include dsr-markdown-style;
 @include dsr-prism-full;
