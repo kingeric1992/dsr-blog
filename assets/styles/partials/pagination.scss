@@ -55,3 +55,18 @@
     }
   }
 }
+
+.posts_pagination {
+  .pagination__buttons {
+    display: flex;
+
+    .previous {
+      flex: 1 1 50%;
+    }
+    .next {
+      flex: 0 1 50%;
+      text-align: right;
+    }
+
+  }
+}
