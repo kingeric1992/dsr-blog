@@ -10,13 +10,21 @@
 
 <body data-theme="auto" data-section="list">
   {{ partial "header" . }}
-  {{ $isTagsList := eq .Section "tags" }}
 
   <main class="main">
     <div class="container">
       <div class="content">
         <div class="content__inner post__list">
-          {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Section) }}
+          {{ $pages := where .Site.RegularPages "Type" "in" .Section}}
+          {{ if eq .Data.Plural "tags" "categories" }}
+          <h2>{{ .Data.Plural }}: {{ .Title }}</h2>
+          {{ $pages = .Pages }}
+          {{ end }}
+          
+          {{/* 
+            // .Paginate func can only called once 
+          */}}
+          {{ $paginator := .Paginate $pages }}
           {{ range $paginator.Pages }}
           <div class="card">
             {{ $bannerImages := .Page.Resources.Match "*index.webp" }}

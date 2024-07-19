@@ -23,8 +23,28 @@
   </span>
   {{ printf "" }}
   <span class="post__metaMinutes">
-    {{- .Scratch.Set "ICON_NAME" "file-alt" -}}
+    {{- .Scratch.Set "ICON_NAME" "clock" -}}
     {{- partial "icon" . -}}
     {{- printf "%d minutes" .ReadingTime -}}
   </span>
+  {{- if .Params.categories -}}
+  <span class="post__metaCategory">
+    {{- .Scratch.Set "ICON_NAME" "folder" -}}
+    {{- partial "icon" . -}}
+    {{ range .Params.categories }}
+      <a>{{ . }}</a>
+    {{ end }}
+  </span>
+  {{- end -}}
+  {{- if .Params.tags -}}
+  <span class="post__metaTag">
+    {{- .Scratch.Set "ICON_NAME" "hashtag" -}}
+    {{- partial "icon" . -}}
+    {{ range .Params.tags }}
+      <a>{{ . }}</a>
+    {{ end }}
+  </span>
+  {{- end -}}
+
+  
 </div>

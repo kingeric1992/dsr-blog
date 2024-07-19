@@ -94,6 +94,14 @@ tt {
 .footer {
   z-index: 1;
 }
+.post {
+  &__title { 
+    text-decoration: underline;
+  }
+  &__title:hover { 
+    text-decoration: none;
+  }
+}
 
 // medium-zoom
 
